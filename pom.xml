@@ -24,4 +24,18 @@
         </dependency>
     </dependencies>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version> <!-- Usa la versión más reciente -->
+                <configuration>
+                    <!-- Configuraciones opcionales, ej: idioma -->
+                    <source>17</source> <!-- Versión de Java -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
 </project>
