@@ -14,7 +14,7 @@ public class Personaje {
     public Personaje(String nombre) {
         this.nombre = nombre;
         this.inventario = new HashMap<>();
-        this.equipo = new TreeMap<>();
+        this.equipo = new TreeMap<>(Comparator.comparing(TipoEquipamiento::toString));
     }
 
     /**
