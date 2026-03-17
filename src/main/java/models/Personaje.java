@@ -58,7 +58,7 @@ public class Personaje {
      * @param item
      */
     public void agregarEquipo(TipoEquipamiento tipoEquipamiento, Item item) {
-        //No vamos a comprobar que el item esté en el inventario
+        //No vamos a comprobar que el item esté en el inventario, asumimos que el usuario lo hace bien
 
         //Verificar que el item no esté ya en el equipo
         if (equipo.containsKey(tipoEquipamiento)) {
@@ -67,6 +67,7 @@ public class Personaje {
             inventario.put(antiguo.getNombre(), antiguo);
         }
         //Poner el nuevo
+        //ToDo - Habría que comprobar TipoItem para ver si puedo ponerlo donde corresponde
         equipo.put(tipoEquipamiento, item);
         //Eliminar el nuevo item del inventario
         inventario.remove(item.getNombre());
